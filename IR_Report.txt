@@ -1,0 +1,106 @@
+========================================
+INCIDENT RESPONSE REPORT
+========================================
+Date: 30 May 2026
+Analyst Name: [Your Name]
+Severity Level: HIGH
+Status: Resolved
+
+========================================
+1. EXECUTIVE SUMMARY
+========================================
+A simulated phishing attack was conducted 
+in a controlled lab environment using 
+VMware. A malicious executable (resume.exe) 
+was delivered to victim machine and 
+executed successfully. Full remote access 
+was obtained by attacker.
+
+========================================
+2. ATTACK TIMELINE
+========================================
+Step 1 - Attacker created malicious 
+         payload using msfvenom on Kali Linux
+
+Step 2 - Payload delivered to victim 
+         via HTTP server
+
+Step 3 - Victim executed resume.exe
+
+Step 4 - Reverse TCP connection established
+         between victim and attacker
+
+Step 5 - Attacker ran post exploitation
+         commands on victim machine
+
+========================================
+3. TOOLS USED BY ATTACKER
+========================================
+- Kali Linux
+- Metasploit Framework
+- msfvenom
+- Meterpreter
+
+========================================
+4. INDICATORS OF COMPROMISE (IOCs)
+========================================
+- Malicious File: resume.exe
+- Attacker IP: 192.168.15.128
+- Victim IP: 192.168.15.1
+- Port Used: 4444
+- Protocol: Reverse TCP
+
+========================================
+5. WHAT ATTACKER COULD DO
+========================================
+- View all running processes
+- Get system information
+- Get current user information
+- Full remote access to victim machine
+
+========================================
+6. HOW TO DETECT THIS ATTACK
+========================================
+- Monitor Event ID 4688 (Process Creation)
+- Monitor outbound connections on port 4444
+- Use EDR solution to detect meterpreter
+- Email attachment scanning
+
+========================================
+7. CONTAINMENT STEPS
+========================================
+- Isolated infected machine from network
+- Killed malicious process resume.exe
+- Removed malicious file from system
+- Reset compromised user credentials
+
+========================================
+8. ROOT CAUSE
+========================================
+User executed untrusted file received 
+via phishing simulation. No endpoint 
+protection was enabled on victim machine.
+
+========================================
+9. RECOMMENDATIONS
+========================================
+1. Enable Windows Defender at all times
+2. Never run unknown executable files
+3. Enable audit policy for process creation
+4. Deploy EDR solution on all endpoints
+5. Conduct regular security awareness training
+6. Block outbound connections on port 4444
+7. Implement email filtering solution
+
+========================================
+10. LESSONS LEARNED
+========================================
+- Phishing attacks are very effective
+- Users need regular security training
+- Endpoint protection is critical
+- Network monitoring can detect attacks
+- Incident response planning is essential
+
+========================================
+END OF REPORT
+========================================
